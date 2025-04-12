@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ambiguous Title: {{ title }}</title>
+</head>
+<body>
+  <h1>Ambiguous Title</h1>
+  <p>The title "{{ title }}" is ambiguous. Please choose one of the following options or try another keyword:</p>
+  <ul>
+    {% for suggestion in suggestions %}
+      <li>{{ suggestion }}</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ url_for('index') }}">Back</a></p>
+</body>
+</html>
